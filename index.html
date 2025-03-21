@@ -6,8 +6,10 @@
     <title>Freiduría online</title>
 </head>
 <body>
-    <h1>¡¡Pide aquí tu rico pescaíto!!</h1>
-    <img src="./pescado_frito.jpg" alt="Bandeja pescado frito">
+    <div class="header-container">
+        <h1>¡¡Pide aquí tu rico pescaíto!!</h1>
+        <img src="./pescado_frito.jpg" alt="Bandeja pescado frito">
+    </div>
     <form>
         <div class="form-container">
             <span>Datos del cliente</span>
@@ -20,58 +22,73 @@
             <label>Dirección:</label>
             <input type="text" id="address">
             <label>Teléfono:</label>
-            <input type="text" id="phone">
+            <input type="number" id="phone">
             <label>Hora aproximada de entrega:</label>
             <input type="time" id="time">
         </div>
-        <span>Pedido de pescado</span>
         <div class="form-container">
             <span>Pedido de pescado</span>
             <label>Tipo de pescado:</label>
             <select id="fish-type">
-                <option value="calamares">Calamares</option>
+                <option value="calamares" selected>Calamares</option>
                 <option value="adobo">Adobo</option>
                 <option value="boquerones">Boquerones</option>
             </select>
             <label>Nº de raciones</label>
             <select id="amount">
-                <option value="1">1</option>
+                <option value="1" selected>1</option>
                 <option value="2">2</option>
                 <option value="3">3</option>
                 <option value="4">4</option>
                 <option value="5">5</option>
             </select>
             <label>Acompañamiento:</label>
-            <div>
-                <label>Patatas fritas (4€)</label>
-                <input type="checkbox" name="patatas">
-
-                <label>Ensaladilla (4€)</label>
-                <input type="checkbox" name="ensaladilla">
-
-                <label>Botella de manzanilla (4€)</label>
-                <input type="checkbox" name="bottle">
+            <div class="extras">
+                <div class="extra">
+                    <label>Patatas fritas (4€)</label>
+                    <input type="checkbox" id="patatas">
+                </div>
+                <div class="extra">
+                    <label>Ensaladilla (4€)</label>
+                    <input type="checkbox" id="ensaladilla">
+                </div>
+                <div class="extra">
+                    <label>Botella de manzanilla (4€)</label>
+                    <input type="checkbox" id="bottle">
+                </div>
             </div>
         </div>
         <div class="form-container">
             <span>Pago</span>
             <label>Método de pago:</label>
-            <select id="amount">
-                <option value="cash">Efectivo</option>
-                <option value="card">Tarjeta</option>
-                <option value="paypal">Paypal</option>
-            </select>
+            
+            <div class="payments">
+                <div class="paymanet">
+                    <label>Efectivo</label>
+                    <input type="radio">
+                </div>
+                <div class="paymanet">
+                    <label>Tarjeta</label>
+                    <input type="radio">
+                </div>
+                <div class="paymanet">
+                    <label>Paypal</label>
+                    <input type="radio">
+                </div>
+            </div>
         </div>
-        <label>Instrucciones adicionales:</label>
-        <textarea placeholder="Escribe tus preferencias"></textarea>
-        <span>0/150 carácteres</span>
-        <h3>Total: <span>0€</span></h3>
-    </form>
+        <div class="instructions">
+            <label>Instrucciones adicionales:</label>
+            <textarea id="instructionsArea" maxlength="150" placeholder="Escribe tus preferencias"></textarea>
+            <span id="instructionsCount">0/150 carácteres</span>
+        </div>
+        <h3>Total: <span id="finalPrice">0€</span></h3>
 
-    <div class="buttons-container">
-        <button type="button" id="darkmode">Modo Oscuro</button>
-        <button type="submit">Enviar Pedido</button>
-    </div>
+        <div class="buttons-container">
+            <button type="button" id="darkmode">Modo Oscuro</button>
+            <button type="submit" disabled id="sendOrder">Enviar Pedido</button>
+        </div>
+    </form>
 
     <footer>Creado por <a href="https://github.com/DaniGP17">Daniel Gallego</a></footer>
     

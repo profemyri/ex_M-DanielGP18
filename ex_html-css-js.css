@@ -1,11 +1,128 @@
 body {
-   
+	background-color: #faf3e0;
+	width: 800px;
+	align-items: center;
+}
+
+* {
+	margin: 15px;
+	padding: 10px;
+	border-radius: 10px;
 }
 
 h1 {
+	color: #0077b6;
+	font-size: 32px;
+	font-family: Arial, sans-serif;
+}
 
+h2 { /* En mi caso yo no uso los h2 en mi html */
+	font-size: 24px;
+	color: #f4a261;
+}
+
+.header-container {
+	display: block;
+	margin: auto;
+	text-align: center;
 }
 
 form {
+	background-color: #ffffff;
+}
 
+input, select, textarea {
+	border: 1px solid #eaeaea;
+	resize: vertical;
+	min-height: 15px;
+	max-height: 200px;
+}
+
+.buttons-container {
+	margin: auto;
+	text-align: center;
+}
+
+button {
+	background-color: #0077b6;
+	color: white;
+	border: none;
+}
+
+span, label, footer {
+	color: #2c3e50;
+	font-family: Arial, sans-serif;
+}
+
+textarea::placeholder {
+	color: #f4a261;
+}
+
+.form-container {
+	border: 2px solid rgba(116, 116, 116, 0.621);
+	position: relative;
+	display: flex;
+	flex-direction: column;
+}
+
+.form-container span {
+	position: absolute;
+	margin-top: -27px;
+	background-color: white;
+}
+
+label {
+	padding: 0 !important;
+}
+
+input, select {
+	margin-top: 0 !important;
+}
+
+.extras {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	margin-top: 0 !important;
+}
+
+.extra {
+	padding: 0 !important;
+}
+
+.extra input {
+	position: absolute;
+	right: 0;
+}
+
+.instructions {
+	display: flex;
+	flex-direction: column;
+}
+
+.instructions span {
+	margin-top: -10px !important;
+	color: gray;
+	font-size: 12px;
+}
+
+button:disabled {
+	opacity: 0.4;
+	pointer-events: none;
+}
+
+.payments {
+	display: flex;
+	width: auto;
+	margin: auto !important;
+	text-align: center;
+}
+
+.darkmode {
+	background-color: black;
+}
+
+button:hover {
+	background-color: rgb(191, 191, 191);
+	color: #0077b6;
 }
